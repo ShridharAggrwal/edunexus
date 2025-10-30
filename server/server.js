@@ -29,7 +29,14 @@ configureCloudinary();
 const app = express();
 
 // Core middleware
-app.use(cors({ origin: true, credentials: true }));
+const allowedOrigins = [
+  'https://edunexus-lms.vercel.app',
+  'http://localhost:5173'
+];
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true,
+}));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
