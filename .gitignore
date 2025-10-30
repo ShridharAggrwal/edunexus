@@ -1,0 +1,17 @@
+# Node modules and build artifacts (general)
+node_modules/
+dist/
+build/
+
+# dotenv files
+server/.env
+client/.env
+
+# logs and OS clutter
+*.log
+.DS_Store
+Thumbs.db
+
+# Ignore IDE/config
+.vscode/
+*.swp
